@@ -13,7 +13,7 @@ class Player {
         this.color = color
     }
 
-    draw() {
+    drawPlayer() {
         c.beginPath ()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
         c.fillStyle = this.color
@@ -21,7 +21,11 @@ class Player {
     }
 }
 
-const player = new Player(100, 100, 30, 'purple')
-player.draw()
+
+const x = canvas.width / 2
+const y = canvas.height / 2
+
+const player = new Player(x, y, 30, 'purple')
+player.drawPlayer()
 
 console.log(player)
